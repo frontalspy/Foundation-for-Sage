@@ -10,9 +10,8 @@ var gulpif       = require('gulp-if');
 var imagemin     = require('gulp-imagemin');
 var jshint       = require('gulp-jshint');
 var lazypipe     = require('lazypipe');
-var less         = require('gulp-less');
 var merge        = require('merge-stream');
-var minifyCss    = require('gulp-minify-css');
+var cssNano      = require('gulp-cssnano');
 var plumber      = require('gulp-plumber');
 var rev          = require('gulp-rev');
 var runSequence  = require('run-sequence');
@@ -86,9 +85,6 @@ var cssTasks = function(filename) {
       return gulpif(enabled.maps, sourcemaps.init());
     })
     .pipe(function() {
-      return gulpif('*.less', less());
-    })
-    .pipe(function() {
       return gulpif('*.scss', sass({
         outputStyle: 'nested', // libsass doesn't support expanded yet
         precision: 10,
@@ -104,9 +100,8 @@ var cssTasks = function(filename) {
         'opera 12'
       ]
     })
-    .pipe(minifyCss, {
-      advanced: false,
-      rebase: false
+    .pipe(cssNano, {
+        safe: true,
     })
     .pipe(function() {
       return gulpif(enabled.rev, rev());
@@ -247,7 +242,6 @@ gulp.task('watch', function() {
   browserSync.init({
     files: ['{lib,templates}/**/*.php', '*.php'],
     proxy: config.devUrl,
-    browser: "Google Chrome",
     snippetOptions: {
       whitelist: ['/wp-admin/admin-ajax.php'],
       blacklist: ['/wp-admin/**']
@@ -260,6 +254,17 @@ gulp.task('watch', function() {
   gulp.watch(['bower.json', 'assets/manifest.json'], ['build']);
 });
 
+gulp.task('comments', function () {
+  return gulp.src('./dist/styles/*.css')
+    .pipe(cssNano({
+        safe: true,
+        discardComments: {
+          removeAll: true
+        }
+    }))
+    .pipe(gulp.dest('./dist/styles/'));
+});
+
 // ### Build
 // `gulp build` - Run all the build tasks but don't clean up beforehand.
 // Generally you should be running `gulp` instead of `gulp build`.
@@ -267,6 +272,7 @@ gulp.task('build', function(callback) {
   runSequence('styles',
               'scripts',
               ['fonts', 'images'],
+              'comments',
               callback);
 });
 

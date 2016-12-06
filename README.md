@@ -1,3 +1,8 @@
+A fork of [https://github.com/fredericpfisterer/Foundation-for-Sage](https://github.com/fredericpfisterer/Foundation-for-Sage)
+
+Contains a few fixes and updates as well as some useful dependencies and features, such as FontAwesome and Slick Slider.
+
+
 # Foundation for Sage
 [![Build Status](https://travis-ci.org/roots/sage.svg)](https://travis-ci.org/roots/sage)
 [![devDependency Status](https://david-dm.org/roots/sage/dev-status.svg)](https://david-dm.org/roots/sage#info=devDependencies)

@@ -1,3 +1,4 @@
+<?php if( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
 <?php
 /**
  * Sage includes
@@ -25,4 +26,19 @@ foreach ($sage_includes as $file) {
 
   require_once $filepath;
 }
-unset($file, $filepath);
+
+/* 
+
+Recommeded if using Advanced Custom Fields
+
+//add a options page in the admin panel
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page((array(
+      'page_title' => 'Website Options',
+      'menu_title' => 'Website Options',
+      'menu_slug' => 'website_options',
+      'parent_slug' => '',
+      'position' => 'false',
+      'redirect' => 'false',    
+    )));
+} */

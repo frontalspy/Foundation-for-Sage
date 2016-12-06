@@ -1,4 +1,6 @@
-<?php while (have_posts()) : the_post(); ?>
+<?php if( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
+
+ <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
     <header>
       <h1 class="entry-title"><?php the_title(); ?></h1>

@@ -1,12 +1,9 @@
-<?php
-
+<?php if( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 use Roots\Sage\Setup;
 use Roots\Sage\Wrapper;
-
 ?>
-
 <!doctype html>
-<html <?php language_attributes(); ?> class="no-js">
+<html <?php language_attributes(); ?>>
   <?php get_template_part('templates/head'); ?>
   <body <?php body_class(); ?>>
     <!--[if IE]>

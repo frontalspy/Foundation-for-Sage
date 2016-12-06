@@ -1,14 +1,19 @@
 @import "common/_variables";
-@import "settings/_settings";
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
 @import "../../bower_components/foundation-sites/scss/foundation.scss";
+@import "../../bower_components/fontawesome/scss/font-awesome.scss";
+@import "../../bower_components/slick-carousel/slick/slick.scss";
+@import "../../bower_components/slick-carousel/slick/slick-theme.scss";
+@import "../../bower_components/css-hamburgers/_sass/hamburgers/hamburgers.scss";
 // endbower
 
-@include foundation-everything;
+// Flexbox is used by default. Use False to use floats
+@include foundation-everything(true);
 
 @import "common/global";
+@import "components/animations";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
@@ -20,3 +25,4 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+@import "layouts/mobile";
