@@ -1,3 +1,6 @@
+### FrontalSpy Update : December 12th, 2016
+* Initial Upload
+
 ### 8.4.0: December 1st, 2015
 * Update to Bootstrap 3.3.6 ([#1578](https://github.com/roots/sage/pull/1578))
 * Remove unnecessary underscore ([#1577](https://github.com/roots/sage/pull/1577))
@@ -446,3 +449,4 @@
 
 ### 1.0.0: December 18th, 2009
 * Add Blueprint CSS to Starkers
+
