@@ -1,8 +1,8 @@
 {
   "name": "Rotapix-Sage",
-  "version": "8.4.0R",
-  "author": "Brendon <websupport@rotapix.com>",
-  "homepage": "https://ww.rotapix.com",
+  "version": "8.5.0 - FrontalSpy",
+  "author": "Brendon <frontalspy@otakutale.com>",
+  "homepage": "https://github.com/frontalspy/",
   "private": true,
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
     "jscs": "jscs gulpfile.js assets/scripts/*.js"
   },
   "engines": {
-    "node": ">= 0.12.0",
+    "node": ">= 4.5",
     "npm": ">=2.1.5"
   },
   "devDependencies": {
