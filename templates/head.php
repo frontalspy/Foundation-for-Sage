@@ -10,5 +10,7 @@
   <link rel="manifest" href="/manifest.json">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="theme-color" content="#ffffff">
-  <style>.slide:not(:first-of-type) {display: none}.slick-initialized .slick-slide {display: block;}.sub-menu{display: none}@media screen and (max-width: 0em), screen and (min-width: 40em){.show-for-small-only,.hamburger{display: none}}@media screen and (max-width:40em){.hide-for-small-only{display: none}}</style>
+  <!--[if lt IE 9]>
+	  <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+  <![endif]-->
 </head>
