@@ -11,7 +11,8 @@
     "fontawesome": "~4.7.0",
     "slick-carousel": "~1.6.0",
     "slick-lightbox": "~0.1.20",
-    "css-hamburgers": "~0.5.0"
+    "css-hamburgers": "~0.5.0",
+    "html5shiv": "~3.7.3"
   },
   "overrides": {
     "foundation-sites": {
