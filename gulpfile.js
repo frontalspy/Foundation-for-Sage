@@ -254,6 +254,8 @@ gulp.task('watch', function() {
   gulp.watch(['bower.json', 'assets/manifest.json'], ['build']);
 });
 
+// ## Comments
+// Removes comments from CSS and JS files when --production is run
 gulp.task('comments', function () {
   return gulp.src('./dist/styles/*.css')
     .pipe(cssNano({
