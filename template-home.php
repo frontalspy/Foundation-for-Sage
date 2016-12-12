@@ -3,6 +3,7 @@
 <?php
 /**
  * Template Name: Home Template
+ * Tempalte Post Type: page
  */
 ?>
 
