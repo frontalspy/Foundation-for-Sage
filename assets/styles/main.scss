@@ -20,6 +20,7 @@
 // Comment the flex includes and uncomment the
 // following grid to use floats and non-flex
 // @include foundation-grid;
+// @include foundation-float-classes;
 
 // Foundation components. Comment out/remove what you don't need
 @include foundation-typography;
@@ -55,7 +56,6 @@
 @include foundation-tooltip;
 @include foundation-top-bar;
 @include foundation-visibility-classes;
-@include foundation-float-classes;
 
 @import "common/global";
 @import "components/animations";
