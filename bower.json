@@ -45,7 +45,8 @@
         "./dist/plugins/foundation.util.nest.js",
         "./dist/plugins/foundation.util.timerAndImageLoader.js",
         "./dist/plugins/foundation.util.touch.js",
-        "./dist/plugins/foundation.util.triggers.js"
+        "./dist/plugins/foundation.util.triggers.js",
+        "./dist/plugins/foundation.zf.responsiveAccordionTabs.js"
       ]
     },
     "fontawesome": {
