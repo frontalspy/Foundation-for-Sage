@@ -1,75 +1,7 @@
-body {
-}
-
-a:hover,
-a:focus {}
-
-a {
-  @extend %transition;
-}
-
 .primary-colour {
   color: $brand-primary;
 }
 
 .primary-background {
   background: $brand-primary;
-}
-
-.black-colour {
-  color: #212121;
-}
-
-.black-background {
-  background: #212121;
-}
-
-.white-colour {
-  color: white;
-}
-
-.white-background {
-  background: white;
-}
-
-.transparent {
-  background: transparent;
-}
-
-%super-cool-line {
-  position: relative;
-  &:after {
-    @extend .primary-background,
-    %transition;
-    content: '';
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transform: scaleX(0);
-    visibility: hidden;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  @include breakpoint(medium up) {
-    &:hover:after {
-      transform: scaleX(1);
-      visibility: visible;
-    }
-  }
-}
-
-// Responsiveness for recaptcha
-.wpcf7-form-control-wrap {
-  margin: 1em 0;
-  overflow: hidden;
-  @include breakpoint(medium only) {
-    transform: scale(0.8);
-    transform-origin: 0 0;
-  }
-  iframe {
-    height: auto;
-  }
 }
