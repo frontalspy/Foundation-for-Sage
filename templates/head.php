@@ -10,7 +10,4 @@
   <link rel="manifest" href="/manifest.json">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#212121">
   <meta name="theme-color" content="#ffffff">
-  <!--[if lt IE 9]>
-	<script src="<?php echo get_template_directory_uri();?>/dist/scripts/html5shiv.js"></script>
-  <![endif]-->
 </head>
