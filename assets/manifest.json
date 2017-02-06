@@ -17,11 +17,6 @@
         "scripts/customizer.js"
       ]
     },
-    "html5shiv.js": {
-      "files": [
-        "../bower_components/html5shiv/dist/html5shiv.js"
-      ]
-    },
     "jquery.js": {
       "bower": ["jquery"]
     }
