@@ -26,7 +26,6 @@ install:
   - composer global require squizlabs/php_codesniffer
 
 script:
-  - npm run build
-  - npm run jshint
-  - npm run jscs
+  - bower install
+  - gulp
   - phpcs --standard=ruleset.xml --extensions=php -n -s .
