@@ -54,7 +54,7 @@
         "./fonts/*"
       ]
     },
-    "slick-lightbox": {
+    "slick-carousel": {
       "main": [
         "./slick/slick.scss",
         "./slick/slick-theme.scss",
