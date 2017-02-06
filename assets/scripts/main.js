@@ -21,7 +21,7 @@
         // JavaScript to be fired on all pages
 
         $(document).foundation(); // Foundation JavaScript
-        
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -79,13 +79,11 @@
 
 })(jQuery); // Fully reference jQuery after this point.
 
-
 $('.hamburger').click(function() {
   if ($(this).hasClass('is-active')) {
     $(this).removeClass('is-active');
-  }
-  else {
-    $(this).addClass('is-active');    
+  } else {
+    $(this).addClass('is-active');
   }
   $(this).next().find('#top-menu').slideToggle();
 });
