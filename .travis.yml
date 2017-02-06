@@ -12,6 +12,9 @@ matrix:
   allow_failures:
     - php: nightly
 
+env:
+  - TRAVIS_NODE_VERSION="6"
+
 cache:
   directories:
     - bower_components
@@ -19,13 +22,14 @@ cache:
 
 install:
   - npm install -g npm@latest
-  - npm install -g bower gulp
+  - npm install -g bower gulp jscs
   - npm install
   - composer self-update && composer --version
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
   - composer global require squizlabs/php_codesniffer
 
 script:
-  - bower install
-  - gulp
+  - npm run build
+  - npm run jshint
+  - npm run jscs
   - phpcs --standard=ruleset.xml --extensions=php -n -s .
