@@ -4,6 +4,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var browserSync  = require('browser-sync').create();
 var changed      = require('gulp-changed');
 var concat       = require('gulp-concat');
+var deleteEmpty  = require('delete-empty');
 var flatten      = require('gulp-flatten');
 var gulp         = require('gulp');
 var gulpif       = require('gulp-if');
@@ -231,8 +232,9 @@ gulp.task('jshint', function() {
 
 // ### Modernizr
 // `gulp modernizr` - adds modernizr features.
+// Search Customizr for additional options
 gulp.task('modernizr', function() {
-  return gulp.src(project.js)
+  return gulp.src("./dist/**/*")
     .pipe(modernizr())
     .pipe(uglify())
     .pipe(gulp.dest("./dist/scripts/"));
@@ -277,14 +279,22 @@ gulp.task('comments', function () {
     .pipe(gulp.dest('./dist/styles/'));
 });
 
+// ## Empty
+// Removes empty folders
+gulp.task('empty', function() {
+  deleteEmpty.sync('./dist/');
+});
+
 // ### Build
 // `gulp build` - Run all the build tasks but don't clean up beforehand.
 // Generally you should be running `gulp` instead of `gulp build`.
 gulp.task('build', function(callback) {
   runSequence('styles',
-              ['scripts', 'modernizr'],
+              'scripts', 
+              'modernizr',
               ['fonts', 'images'],
               'comments',
+              'empty'
               callback);
 });
 
