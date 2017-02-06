@@ -294,7 +294,7 @@ gulp.task('build', function(callback) {
               'modernizr',
               ['fonts', 'images'],
               'comments',
-              'empty'
+              'empty',
               callback);
 });
 
