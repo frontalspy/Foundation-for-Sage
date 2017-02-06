@@ -19,7 +19,7 @@ cache:
 
 install:
   - npm install -g npm@latest
-  - npm install -g bower gulp jscs
+  - npm install -g bower gulp
   - npm install
   - bower install
   - composer self-update && composer --version
