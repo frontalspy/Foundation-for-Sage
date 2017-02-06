@@ -103,7 +103,7 @@ var cssTasks = function(filename) {
       ]
     })
     .pipe(cssNano, {
-        safe: true,
+      safe: true,
     })
     .pipe(function() {
       return gulpif(enabled.rev, rev());
@@ -234,10 +234,10 @@ gulp.task('jshint', function() {
 // `gulp modernizr` - adds modernizr features.
 // Search Customizr for additional options
 gulp.task('modernizr', function() {
-  return gulp.src("./dist/**/*")
+  return gulp.src('./dist/**/*')
     .pipe(modernizr())
     .pipe(uglify())
-    .pipe(gulp.dest("./dist/scripts/"));
+    .pipe(gulp.dest('./dist/scripts/'));
 });
 
 // ### Clean
@@ -268,13 +268,13 @@ gulp.task('watch', function() {
 
 // ## Comments
 // Removes comments from CSS and JS files when --production is run
-gulp.task('comments', function () {
+gulp.task('comments', function() {
   return gulp.src('./dist/styles/*.css')
     .pipe(cssNano({
-        safe: true,
-        discardComments: {
-          removeAll: true
-        }
+      safe: true,
+      discardComments: {
+        removeAll: true
+      }
     }))
     .pipe(gulp.dest('./dist/styles/'));
 });
@@ -290,7 +290,7 @@ gulp.task('empty', function() {
 // Generally you should be running `gulp` instead of `gulp build`.
 gulp.task('build', function(callback) {
   runSequence('styles',
-              'scripts', 
+              'scripts',
               'modernizr',
               ['fonts', 'images'],
               'comments',
