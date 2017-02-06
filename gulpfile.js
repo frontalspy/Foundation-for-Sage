@@ -13,6 +13,7 @@ var lazypipe     = require('lazypipe');
 var merge        = require('merge-stream');
 var cssNano      = require('gulp-cssnano');
 var plumber      = require('gulp-plumber');
+var modernizr    = require('gulp-modernizr');
 var rev          = require('gulp-rev');
 var runSequence  = require('run-sequence');
 var sass         = require('gulp-sass');
@@ -222,10 +223,19 @@ gulp.task('images', function() {
 gulp.task('jshint', function() {
   return gulp.src([
     'bower.json', 'gulpfile.js'
-  ].concat('!./bower_components/html5shiv/dist/html5shiv.js'))
+  ].concat(project.js))
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
     .pipe(gulpif(enabled.failJSHint, jshint.reporter('fail')));
+});
+
+// ### Modernizr
+// `gulp modernizr` - adds modernizr features.
+gulp.task('modernizr', function() {
+  return gulp.src(project.js)
+    .pipe(modernizr())
+    .pipe(uglify())
+    .pipe(gulp.dest("./dist/scripts/"));
 });
 
 // ### Clean
@@ -272,7 +282,7 @@ gulp.task('comments', function () {
 // Generally you should be running `gulp` instead of `gulp build`.
 gulp.task('build', function(callback) {
   runSequence('styles',
-              'scripts',
+              ['scripts', 'modernizr'],
               ['fonts', 'images'],
               'comments',
               callback);
