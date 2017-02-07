@@ -10,7 +10,7 @@
  * @link https://github.com/roots/sage/pull/1042
  */
 
-if(!defined('ABSPATH') ) {
+if(!defined('ABSPATH')) {
   exit; // Exit if accessed directly
 }
 
