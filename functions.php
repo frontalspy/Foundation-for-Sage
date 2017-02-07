@@ -1,4 +1,3 @@
-<?php if( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
 <?php
 /**
  * Sage includes
@@ -10,6 +9,11 @@
  *
  * @link https://github.com/roots/sage/pull/1042
  */
+
+ if(!defined('ABSPATH') ) {
+     exit; // Exit if accessed directly
+ }
+
 $sage_includes = [
   'lib/assets.php',    // Scripts and stylesheets
   'lib/extras.php',    // Custom functions
@@ -32,7 +36,7 @@ foreach ($sage_includes as $file) {
 Recommeded if using Advanced Custom Fields
 
 //add a options page in the admin panel
-if( function_exists('acf_add_options_page') ) {
+if (function_exists('acf_add_options_page') ) {
 	acf_add_options_page((array(
       'page_title' => 'Website Options',
       'menu_title' => 'Website Options',
