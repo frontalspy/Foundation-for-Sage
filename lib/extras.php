@@ -36,7 +36,7 @@ function excerpt_more() {
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
-class foundationnavmenu extends \walkernavmenu {
+class foundation extends \walkernavmenu {
   public function startlvl(&$output, $depth = 0, $args = array()) {
     $indent = str_repeat("\t", $depth);
     $output .= "\n$indent<ul class=\"menu\">\n";
