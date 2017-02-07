@@ -1,5 +1,5 @@
-<?php if (!defined('ABSPATH') ) { 
-    exit;  // Exit if accessed directly
+<?php if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly
 } ?>
 
 <time class="updated" datetime="<?= get_post_time('c', true); ?>"><?= get_the_date(); ?></time>
