@@ -1,8 +1,8 @@
-<?php if (!defined('ABSPATH') ) { 
-    exit;  // Exit if accessed directly
+<?php if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly
 } ?>
 
- <header>
+<header>
  <?php // Refer to https://jonsuh.com/hamburgers/ for animated hamburger menus. Replace X with desired animation ?>
   <button class="hamburger hamburger--X" type="button" data-hide-for="medium" data-responsive-toggle="top-menu" aria-label="Menu" aria-controls="navigation">
       <span class="hamburger-box">
