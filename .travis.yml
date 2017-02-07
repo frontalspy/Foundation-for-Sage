@@ -21,6 +21,8 @@ cache:
     - node_modules
 
 install:
+  - nvm install $TRAVIS_NODE_VERSION
+  - nvm use $TRAVIS_NODE_VERSION
   - npm install -g npm@latest
   - npm install -g bower gulp jscs
   - npm install
