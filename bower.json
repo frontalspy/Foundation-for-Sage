@@ -1,5 +1,5 @@
 {
-  "name": "sage",
+  "name": "Sage-Foundation-6.3",
   "homepage": "https://roots.io/sage/",
   "authors": [
     "Ben Word <ben@benword.com>"
@@ -9,8 +9,8 @@
   "dependencies": {
     "foundation-sites": "~6.3",
     "fontawesome": "~4.7.0",
-    "slick-carousel": "~1.6.0",
-    "slick-lightbox": "~0.1.20",
+    "slick-carousel": "~1.4.1",
+    "slick-lightbox": "~0.2.7",
     "css-hamburgers": "~0.5.0"
   },
   "overrides": {
