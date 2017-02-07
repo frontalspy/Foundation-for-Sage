@@ -1,4 +1,6 @@
-<?php if( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
+<?php if (!defined('ABSPATH') ) { 
+    exit;  // Exit if accessed directly
+} ?>
 
  <header>
  <?php // Refer to https://jonsuh.com/hamburgers/ for animated hamburger menus. Replace X with desired animation ?>
