@@ -1,4 +1,6 @@
-<?php if( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
+<?php if (!defined('ABSPATH') ) { 
+    exit;  // Exit if accessed directly
+} ?>
 
 <?php
 if (post_password_required()) {
