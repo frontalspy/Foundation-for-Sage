@@ -14,8 +14,8 @@ You can find more information about their implementations and how to use them he
 
 
 # Foundation 6.3 for Sage
-[![Build Status](https://travis-ci.org/roots/sage.svg)](https://travis-ci.org/roots/sage)
-[![devDependency Status](https://david-dm.org/roots/sage/dev-status.svg)](https://david-dm.org/roots/sage#info=devDependencies)
+[![Build Status](https://travis-ci.org/frontalspy/Sage-Foundation-6.3.svg?branch=master)](https://travis-ci.org/frontalspy/Sage-Foundation-6.3)
+[![devDependencies Status](https://david-dm.org/frontalspy/sage-foundation-6.3/dev-status.svg)](https://david-dm.org/frontalspy/sage-foundation-6.3?type=dev)
 
 Sage is a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and Zurb Foundation for sites, that will help you make better themes.
 
