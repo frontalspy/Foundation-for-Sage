@@ -1,4 +1,6 @@
-<?php if( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
+<?php if (!defined('ABSPATH') ) { 
+    exit;  // Exit if accessed directly
+} ?>
 
  <form role="search" method="get" class="site-search js-search-submit" action="<?= esc_url(home_url('/')); ?>">
   <div class="row">
