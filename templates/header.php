@@ -3,7 +3,7 @@
 } ?>
 
 <header>
- <?php // Refer to https://jonsuh.com/hamburgers/ for animated hamburger menus. Replace X with desired animation ?>
+  <?php // Refer to https://jonsuh.com/hamburgers/ for animated hamburger menus. Replace X with desired animation ?>
   <button class="hamburger hamburger--X" type="button" data-hide-for="medium" data-responsive-toggle="top-menu" aria-label="Menu" aria-controls="navigation">
       <span class="hamburger-box">
           <span class="hamburger-inner"></span>
