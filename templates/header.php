@@ -19,7 +19,7 @@
      <nav class="top-bar-section">
       <ul class="dropdown menu" data-dropdown-menu id="main-menu">
         <?php if (has_nav_menu('primary_navigation')) :?>
-          <?php wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav', 'container' => '', 'items_wrap' => '%3$s', 'walker' => new Roots\Sage\Extras\foundation_nav_menu()]);?>
+          <?php wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav', 'container' => '', 'items_wrap' => '%3$s', 'walker' => new Roots\Sage\Extras\foundation_Nav_Menu()]);?>
         <?php endif;?>
       </ul>
       </nav>
