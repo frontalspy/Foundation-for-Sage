@@ -1,5 +1,5 @@
-<?php if (!defined('ABSPATH') ) { 
-    exit; // Exit if accessed directly 
+<?php if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly
 } ?>
 
 <?php get_template_part('templates/page', 'header'); ?>
