@@ -11,6 +11,10 @@
 
     <!-- Disable newline after opening brace -->
     <exclude name="Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace"/>
+    
+    <!-- Allow class names to be non camel case -->
+    
+    <exclude name="Squiz.Classes.ValidClassName.NotCamelCap" />
 
     <!-- Allow multiple PHP statements in the same line (usually in template files) -->
     <exclude name="Generic.Formatting.DisallowMultipleStatements.SameLine"/>
