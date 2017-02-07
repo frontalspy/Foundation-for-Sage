@@ -1,4 +1,6 @@
-<?php if( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
+<?php if (!defined('ABSPATH') ) { 
+    exit;  // Exit if accessed directly
+} ?>
 
  <article <?php post_class(); ?>>
   <header>
