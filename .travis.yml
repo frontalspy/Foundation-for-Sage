@@ -32,6 +32,7 @@ install:
   - composer global require squizlabs/php_codesniffer
 
 script:
+  - npm rebuild node-sass
   - npm run build
   - npm run jshint
   - npm run jscs
