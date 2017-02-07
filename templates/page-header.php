@@ -1,5 +1,5 @@
-<?php if (!defined('ABSPATH') ) { 
-    exit;  // Exit if accessed directly
+<?php if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly
 } ?>
 
 <?php use Roots\Sage\Titles; ?>
