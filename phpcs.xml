@@ -2,10 +2,11 @@
 <ruleset name="Wordpress">
   <description>Wordpress Standards</description>
   <!-- Ignore Camel Case -->
-  <rule ref="Squiz.Classes.ValidClassName.NotCamelCaps">
+  <rule ref="Squiz">
+    <exclude name="Squiz.Classes.ValidClassName.NotCamelCaps"/>
   </rule>
   <!-- Allow PHP closing tags -->
-  <rule ref="PSR2.Files.ClosingTag.NotAllowed">
-    <exclude-pattern>templates</exclude-pattern>
+  <rule ref="PSR2">
+    <exlucde name=".Files.ClosingTag.NotAllowed"/>
   </rule>
 </ruleset>
