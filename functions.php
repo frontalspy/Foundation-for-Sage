@@ -36,7 +36,7 @@ foreach ($sage_includes as $file) {
 // render blocking.
 function nonRenderBlockScript($tag, $handle) {
   if ('jquery' == $handle) {
-    return str_replace( ' src', ' async src', $tag );
+    return $tag;
   } else {
     return str_replace( ' src', ' defer src', $tag );
   }
