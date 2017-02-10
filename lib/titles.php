@@ -1,10 +1,10 @@
 <?php
 
+namespace Roots\Sage\Titles;
+
 if (!defined('ABSPATH')) {
   exit; // Exit if accessed directly
 }
-
-namespace Roots\Sage\Titles;
 
 /**
  * Page titles
