@@ -1,10 +1,10 @@
 <?php
 
+namespace Roots\Sage\Assets;
+
 if (!defined('ABSPATH')) {
   exit; // Exit if accessed directly
 }
-
-namespace Roots\Sage\Assets;
 
 /**
  * Get paths for assets
