@@ -1,10 +1,10 @@
 <?php
 
+namespace Roots\Sage\Customizer;
+
 if (!defined('ABSPATH')) {
   exit; // Exit if accessed directly
 }
-
-namespace Roots\Sage\Customizer;
 
 use Roots\Sage\Assets;
 
