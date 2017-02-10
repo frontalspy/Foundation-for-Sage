@@ -1,10 +1,10 @@
 <?php
 
+namespace Roots\Sage\Extras;
+
 if (!defined('ABSPATH')) {
   exit; // Exit if accessed directly
 }
-
-namespace Roots\Sage\Extras;
 
 use Roots\Sage\Setup;
 
