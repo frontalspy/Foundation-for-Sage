@@ -1,10 +1,10 @@
 <?php
 
+namespace Roots\Sage\Wrapper;
+
 if (!defined('ABSPATH')) {
   exit; // Exit if accessed directly
 }
-
-namespace Roots\Sage\Wrapper;
 
 /**
  * Theme wrapper
