@@ -42,3 +42,10 @@ class Foundation_Nav_Menu extends \Walker_Nav_menu {
     $output .= "\n$indent<ul class=\"menu\">\n";
   }
 }
+
+// Adds Foundation classes to next/prev buttons
+function posts_link_attributes() {
+    return 'class="button primary-background"';
+}
+add_filter('next_posts_link_attributes', __NAMESPACE__ . '\\posts_link_attributes');
+add_filter('previous_posts_link_attributes', __NAMESPACE__ . '\\posts_link_attributes');
