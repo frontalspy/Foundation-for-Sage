@@ -58,7 +58,8 @@
       "main": [
         "./slick/slick.scss",
         "./slick/slick-theme.scss",
-        "./slick/slick.js"
+        "./slick/slick.js",
+        "./slick/fonts/*"
       ]
     }
   },
