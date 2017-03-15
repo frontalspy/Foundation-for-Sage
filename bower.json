@@ -59,7 +59,8 @@
         "./slick/slick.scss",
         "./slick/slick-theme.scss",
         "./slick/slick.js",
-        "./slick/fonts/*"
+        "./slick/fonts/*",
+        "./slick/ajax-loader.gif"
       ]
     }
   },
