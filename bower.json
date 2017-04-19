@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "foundation-sites": "~6.3",
+    "foundation-sites": "~6.3.1",
     "fontawesome": "~4.7.0",
     "slick-carousel": "~1.4.1",
     "slick-lightbox": "~0.2.7",
