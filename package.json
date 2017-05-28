@@ -6,7 +6,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git://rotapixtesting.com/git/theme"
+    "url": "git://github.com/frontalspy/Sage-Foundation-6.3/"
   },
   "bugs": {
     "url": "https://github.com/roots/sage/issues"
