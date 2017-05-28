@@ -235,7 +235,9 @@ gulp.task('jshint', function() {
 // Search Customizr for additional options
 gulp.task('modernizr', function() {
   return gulp.src('./dist/**/*')
-    .pipe(modernizr())
+    .pipe(modernizr(
+        {'options': ['setClasses','html5printshiv'],}
+     ))
     .pipe(uglify())
     .pipe(gulp.dest('./dist/scripts/'));
 });
@@ -289,11 +291,9 @@ gulp.task('empty', function() {
 // `gulp build` - Run all the build tasks but don't clean up beforehand.
 // Generally you should be running `gulp` instead of `gulp build`.
 gulp.task('build', function(callback) {
-  runSequence('styles',
-              'scripts',
+  runSequence(['styles', 'scripts'],
+              ['fonts', 'images', 'comments'],
               'modernizr',
-              ['fonts', 'images'],
-              'comments',
               'empty',
               callback);
 });
