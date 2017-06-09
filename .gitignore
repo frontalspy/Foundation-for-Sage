@@ -12,7 +12,7 @@ gulpfile.js
 .travis.yml
 
 *.md
-/*.json
+*.json
 
 # Compiled source #
 ###################
