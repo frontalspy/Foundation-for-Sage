@@ -1,13 +1,14 @@
 {
-  "name": "Sage-Foundation-6.3",
+  "name": "Sage-Foundation",
   "homepage": "https://roots.io/sage/",
   "authors": [
-    "Ben Word <ben@benword.com>"
+    "Ben Word <ben@benword.com>",
+    "Brendon FrontalSpy"
   ],
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "foundation-sites": "~6.3.1",
+    "foundation-sites": "~6.4.1",
     "fontawesome": "~4.7.0",
     "slick-carousel": "~1.6.0",
     "slick-lightbox": "~0.2.8",
@@ -29,15 +30,18 @@
         "./dist/js/plugins/foundation.magellan.js",
         "./dist/js/plugins/foundation.offcanvas.js",
         "./dist/js/plugins/foundation.orbit.js",
+        "./dist/js/plugins/foundation.responsiveAccordionTabs.js"
         "./dist/js/plugins/foundation.responsiveMenu.js",
         "./dist/js/plugins/foundation.responsiveToggle.js",
         "./dist/js/plugins/foundation.reveal.js",
         "./dist/js/plugins/foundation.slider.js",
+        "./dist/js/plugins/foundation.smoothScroll.js,
         "./dist/js/plugins/foundation.sticky.js",
         "./dist/js/plugins/foundation.tabs.js",
         "./dist/js/plugins/foundation.toggler.js",
         "./dist/js/plugins/foundation.tooltip.js",
         "./dist/js/plugins/foundation.util.box.js",
+        "./dist/js/plugins/foundation.util.imageLoader.js",
         "./dist/js/plugins/foundation.util.keyboard.js",
         "./dist/js/plugins/foundation.util.mediaQuery.js",
         "./dist/js/plugins/foundation.util.motion.js",
@@ -45,7 +49,6 @@
         "./dist/js/plugins/foundation.util.timerAndImageLoader.js",
         "./dist/js/plugins/foundation.util.touch.js",
         "./dist/js/plugins/foundation.util.triggers.js",
-        "./dist/js/plugins/foundation.zf.responsiveAccordionTabs.js"
       ]
     },
     "fontawesome": {
