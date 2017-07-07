@@ -2,61 +2,275 @@
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
-@import "../../bower_components/foundation-sites/scss/foundation.scss";
-@import "../../bower_components/fontawesome/scss/font-awesome.scss";
-@import "../../bower_components/slick-carousel/slick/slick.scss";
-@import "../../bower_components/slick-carousel/slick/slick-theme.scss";
-@import "../../bower_components/css-hamburgers/_sass/hamburgers/hamburgers.scss";
+
 // endbower
 
-// Foundation Style Starts
+
+/**
+ * -------------------------------------------------------------
+ *                   Foundation Style Starts
+ * -------------------------------------------------------------
+ */
 @include foundation-global-styles;
 
-// Flex classes and support. Comment out if you
-// don't want to use flex
-@include foundation-flex-classes;
-@include foundation-flex-grid;
 
-// Comment the flex includes and uncomment the
-// following grid to use floats and non-flex
+/**
+ * -------------------------------------------------------------
+ *                   Foundation Grid Layout
+ * -------------------------------------------------------------
+ */
+
+/**
+ * XY Grid
+ * Foundation 6.4.x comes with the new XY Grid. This is enabled by default.
+ * @link http://foundation.zurb.com/sites/docs/xy-grid.html
+ */
+@include foundation-grid;
+@include foundation-xy-grid-classes;
+
+
+/**
+ * Flex Grid
+ * Using a 6.3 Flex based grid. Comment out the XY grid and 
+ * uncomment the flex includes to use.
+ * @link http://foundation.zurb.com/sites/docs/flex-grid.html
+ * @link http://foundation.zurb.com/sites/docs/flexbox-utilities.html
+ */
+//@include foundation-flex-classes;
+//@include foundation-flex-grid;
+
+
+/**
+ * Float Grid
+ * If you need support for older browsers, uncomment the below classes 
+ * for a float based grid. 
+ * @link http://foundation.zurb.com/sites/docs/grid.html
+ * @link http://foundation.zurb.com/sites/docs/float-classes.html
+ */
 // @include foundation-grid;
 // @include foundation-float-classes;
 
-// Foundation components. Comment out/remove what you don't need
+
+/**
+ * -------------------------------------------------------------
+ *                       Foundation Components
+ * -------------------------------------------------------------
+ */
+
+/** 
+ * Typography classes & styling
+ * @link http://foundation.zurb.com/sites/docs/typography-base.html
+ * @link http://foundation.zurb.com/sites/docs/typography-helpers.html
+ */
 @include foundation-typography;
+
+/** 
+ * Form classes & styling
+ * @link http://foundation.zurb.com/sites/docs/typography-base.html
+ * @link http://foundation.zurb.com/sites/docs/typography-helpers.html
+ */
 @include foundation-forms;
+
+/** 
+ * Basic Button classes & styling
+ * @link http://foundation.zurb.com/sites/docs/button.html
+ */
 @include foundation-button;
+
+/** 
+ * Accordion component; Requires foundation.accordion.js
+ * @link http://foundation.zurb.com/sites/docs/accordion.html
+ */
 @include foundation-accordion;
+
+/** 
+ * Accordion Menu component; Requires foundation.accordionMenu.js
+ * @link http://foundation.zurb.com/sites/docs/accordion-menu.html
+ */
 @include foundation-accordion-menu;
+
+/** 
+ * Badge classes & styling
+ * @link http://foundation.zurb.com/sites/docs/badge.html
+ */
 @include foundation-badge;
+
+/** 
+ * Breadcrumbs classes & styling
+ * @link http://foundation.zurb.com/sites/docs/breadcrumbs.html
+ */
 @include foundation-breadcrumbs;
+
+/** 
+ * Button Group classes & styling
+ * @link http://foundation.zurb.com/sites/docs/typography-base.html
+ */
 @include foundation-button-group;
+
+/** 
+ * Callout classes & styling
+ * @link http://foundation.zurb.com/sites/docs/callout.html
+ */
 @include foundation-callout;
+
+/** 
+ * Card classes & styling
+ * @link http://foundation.zurb.com/sites/docs/card.html
+ */
 @include foundation-card;
+
+/** 
+ * Close Button classes & styling
+ * @link http://foundation.zurb.com/sites/docs/close-button.html
+ */
 @include foundation-close-button;
+
+/** 
+ * Menu classes & styling
+ * @link http://foundation.zurb.com/sites/docs/menu.html
+ */
 @include foundation-menu;
+
+/** 
+ * Menu Icon classes & styling
+ */
 @include foundation-menu-icon;
+
+/** 
+ * Drilldown Menu component; requires foundation.drilldown.js
+ * @link http://foundation.zurb.com/sites/docs/drilldown-menu.html
+ */
 @include foundation-drilldown-menu;
+
+/** 
+ * Dropdown component; requires foundation.dropdown.js
+ * @link http://foundation.zurb.com/sites/docs/dropdown.html
+ */
 @include foundation-dropdown;
+
+/** 
+ * Dropdown Menu component; requires foundation.dropdownMenu.js
+ * @link http://foundation.zurb.com/sites/docs/typography-helpers.html
+ */
 @include foundation-dropdown-menu;
+
+/** 
+ * Label classes & styling
+ * @link http://foundation.zurb.com/sites/docs/label.html
+ */
 @include foundation-label;
+
+/** 
+ * Media Object classes & styling
+ * @link http://foundation.zurb.com/sites/docs/media-object.html
+ */
 @include foundation-media-object;
+
+/** 
+ * Off-canvas component; requires foundation.offcanvas.js
+ * @link http://foundation.zurb.com/sites/docs/off-canvas.html
+ */
 @include foundation-off-canvas;
+
+/** 
+ * Orbit component; requires foundation.orbit.js, foundation.util.motion.js
+ * and requires the Motion UI library  *bower install motion-ui*
+ * @link http://foundation.zurb.com/sites/docs/orbit.html
+ * @link http://foundation.zurb.com/sites/docs/motion-ui.html
+ */
 @include foundation-orbit;
+
+/** 
+ * Pagination classes & styling
+ * @link http://foundation.zurb.com/sites/docs/pagination.html
+ */
 @include foundation-pagination;
+
+/** 
+ * Progress Bar classes & styling
+ * @link http://foundation.zurb.com/sites/docs/progress-bar.html
+ */
 @include foundation-progress-bar;
+
+/** 
+ * Responsive Embed (video, iframe) classes & styling
+ * @link http://foundation.zurb.com/sites/docs/responsive-embed.html
+ */
 @include foundation-responsive-embed;
+
+/** 
+ * Slider component; requires foundation.slider.js
+ * @link http://foundation.zurb.com/sites/docs/slider.html
+ */
 @include foundation-slider;
+
+/** 
+ * Sticky component; requires foundation.sticky.js
+ * @link http://foundation.zurb.com/sites/docs/sticky.html
+ */
 @include foundation-sticky;
+
+/** 
+ * Reveal component; requires foundation.reveal.js
+ * @link http://foundation.zurb.com/sites/docs/reveal.html
+ */
 @include foundation-reveal;
+
+/** 
+ * Switch classes & styling
+ * @link http://foundation.zurb.com/sites/docs/switch.html
+ */
 @include foundation-switch;
+
+/** 
+ * Table classes & styling
+ * @link http://foundation.zurb.com/sites/docs/table.html
+ */
 @include foundation-table;
+
+/** 
+ * Tabs component; requires foundation.tabs.js
+ * @link http://foundation.zurb.com/sites/docs/tabs.html
+ * Responsive Accordion Tabs; requires foundation.responsiveAccordionTabs.js
+ * @link http://foundation.zurb.com/sites/docs/responsive-accordion-tabs.html
+ */
 @include foundation-tabs;
+
+/** 
+ * Thumbnail classes & styling
+ * @link http://foundation.zurb.com/sites/docs/thumbnail.html
+ */
 @include foundation-thumbnail;
+
+/** 
+ * Title Bar classes & styling
+ */
 @include foundation-title-bar;
+
+/** 
+ * Tooltip Component
+ * @link http://foundation.zurb.com/sites/docs/tooltip.html
+ */
 @include foundation-tooltip;
+
+/** 
+ * Top Bar classes & styling; requires foundation.tooltip.js
+ * @link http://foundation.zurb.com/sites/docs/top-bar.html
+ */
 @include foundation-top-bar;
+
+/** 
+ * Visibility Classes styling
+ * @link http://foundation.zurb.com/sites/docs/visibility.html
+ */
 @include foundation-visibility-classes;
+
+
+/**
+ * -------------------------------------------------------------
+ *                       Local Style Imports
+ * -------------------------------------------------------------
+ */
 
 @import "common/global";
 @import "components/animations";
