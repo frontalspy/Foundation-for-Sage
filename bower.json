@@ -69,6 +69,7 @@
   },
   "resolutions": {
     "slick-carousel": "~1.6.0",
-    "jquery": ">=1.7"
+    "jquery": ">=1.7",
+    "what-input": "~4.1.3"
   }
 }
