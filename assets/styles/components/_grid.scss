@@ -1,19 +1,19 @@
-// Grid system
+// Grid system using XY classes by default. Change/remove if using other grid types.
 .content {
-  @include grid-row;
+  @include xy-grid-container;
 }
 .main {
-  @include grid-column($main-sm-columns);
+  @include xy-cell($main-sm-columns);
   .sidebar-primary & {
-    @include grid-column($main-sm-columns - $sidebar-sm-columns);
+    @include xy-cell($main-sm-columns - $sidebar-sm-columns);
     @include breakpoint(medium down) {
-      @include grid-column($main-sm-columns);
+      @include xy-cell($main-sm-columns);
     }
   }
 }
 .sidebar {
-  @include grid-column($sidebar-sm-columns);
+  @include xy-cell($sidebar-sm-columns);
   @include breakpoint(medium down) {
-    @include grid-column($main-sm-columns);
+    @include xy-cell($main-sm-columns);
   }
 }
