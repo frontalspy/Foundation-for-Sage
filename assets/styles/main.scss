@@ -26,7 +26,13 @@
  * @link http://foundation.zurb.com/sites/docs/xy-grid.html
  */
 @include foundation-grid;
-@include foundation-xy-grid-classes;
+@include foundation-xy-grid-classes($base-grid: true,
+  $margin-grid: true,
+  $padding-grid: true,
+  $block-grid: true,
+  $collapse: true,
+  $offset: true,
+  $vertical-grid: true);
 
 
 /**
