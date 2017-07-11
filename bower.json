@@ -19,6 +19,15 @@
       "main": [
         "./scss/foundation.scss",
         "./dist/js/plugins/foundation.core.js",
+        "./dist/js/plugins/foundation.util.box.js",
+        "./dist/js/plugins/foundation.util.imageLoader.js",
+        "./dist/js/plugins/foundation.util.keyboard.js",
+        "./dist/js/plugins/foundation.util.mediaQuery.js",
+        "./dist/js/plugins/foundation.util.motion.js",
+        "./dist/js/plugins/foundation.util.nest.js",
+        "./dist/js/plugins/foundation.util.timerAndImageLoader.js",
+        "./dist/js/plugins/foundation.util.touch.js",
+        "./dist/js/plugins/foundation.util.triggers.js",
         "./dist/js/plugins/foundation.abide.js",
         "./dist/js/plugins/foundation.accordion.js",
         "./dist/js/plugins/foundation.accordionMenu.js",
@@ -39,16 +48,7 @@
         "./dist/js/plugins/foundation.sticky.js",
         "./dist/js/plugins/foundation.tabs.js",
         "./dist/js/plugins/foundation.toggler.js",
-        "./dist/js/plugins/foundation.tooltip.js",
-        "./dist/js/plugins/foundation.util.box.js",
-        "./dist/js/plugins/foundation.util.imageLoader.js",
-        "./dist/js/plugins/foundation.util.keyboard.js",
-        "./dist/js/plugins/foundation.util.mediaQuery.js",
-        "./dist/js/plugins/foundation.util.motion.js",
-        "./dist/js/plugins/foundation.util.nest.js",
-        "./dist/js/plugins/foundation.util.timerAndImageLoader.js",
-        "./dist/js/plugins/foundation.util.touch.js",
-        "./dist/js/plugins/foundation.util.triggers.js"
+        "./dist/js/plugins/foundation.tooltip.js"
       ]
     },
     "fontawesome": {
