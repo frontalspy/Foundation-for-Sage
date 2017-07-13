@@ -25,7 +25,6 @@
  * Foundation 6.4.x comes with the new XY Grid. This is enabled by default.
  * @link http://foundation.zurb.com/sites/docs/xy-grid.html
  */
-@include foundation-grid;
 @include foundation-xy-grid-classes($base-grid: true,
   $margin-grid: true,
   $padding-grid: true,
