@@ -1,12 +1,12 @@
 {
-  "name": "Sage-Foundation-6.3",
+  "name": "Sage-Foundation-6.4",
   "version": "8.5.0",
   "author": "Brendon <frontalspy@otakutale.com>",
   "homepage": "https://github.com/frontalspy/",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/frontalspy/Sage-Foundation-6.3/"
+    "url": "git://github.com/frontalspy/Sage-Foundation/"
   },
   "bugs": {
     "url": "https://github.com/roots/sage/issues"
@@ -28,14 +28,14 @@
   },
   "devDependencies": {
     "asset-builder": "^1.1.0",
+    "autoprefixer": "^7.1.2",
     "babel-preset-es2015": "^6.6.0",
     "browser-sync": "^2.8.2",
-    "del": "^2.2.2",
-    "delete-empty": "^0.1.3",
+    "del": "^3.0.0",
+    "delete-empty": "^1.0.1",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-changed": "^2.0.0",
+    "gulp-babel": "^7.0.0",
+    "gulp-changed": "^3.1.0",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.2",
     "gulp-flatten": "0.3.1",
@@ -44,18 +44,19 @@
     "gulp-jshint": "^2.0.4",
     "gulp-modernizr": "^1.0.0-alpha",
     "gulp-plumber": "^1.0.1",
+    "gulp-postcss": "^7.0.0",
     "gulp-rename": "^1.2.2",
-    "gulp-rev": "^7.1.2",
+    "gulp-rev": "^8.0.0",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^2.4.1",
-    "gulp-uglify": "^2.1.2",
+    "gulp-uglify": "^3.0.0",
     "imagemin-pngcrush": "^5.1.0",
     "jshint": "^2.9.4",
     "jshint-stylish": "^2.0.1",
     "lazypipe": "^1.0.1",
     "merge-stream": "^1.0.0",
     "minimist": "^1.1.3",
-    "run-sequence": "^1.1.2",
+    "run-sequence": "^2.1.0",
     "traverse": "^0.6.6",
     "wiredep": "^4.0.0"
   }
