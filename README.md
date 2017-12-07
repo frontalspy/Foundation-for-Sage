@@ -4,7 +4,7 @@ Contains a few fixes and updates as well as some useful dependencies and feature
 
 You can find more information about their implementations and how to use them here:
 
-* Foundation 6.3: http://foundation.zurb.com/sites/docs/
+* Foundation 6.4: http://foundation.zurb.com/sites/docs/
 * FontAwesome: http://fontawesome.io/
 * Slick Slider: https://kenwheeler.github.io/slick/
 * Slick Lightbox: https://mreq.github.io/slick-lightbox/
