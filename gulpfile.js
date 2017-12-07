@@ -82,7 +82,7 @@ var revManifest = path.dist + 'assets.json';
 var cssTasks = function(filename) {
   var plugins = [
     autoprefixer
-  ]
+  ];
   return lazypipe()
     .pipe(function() {
       return gulpif(!enabled.failStyleTask, plumber());
