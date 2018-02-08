@@ -69,6 +69,20 @@ var enabled = {
 // Path to the compiled assets manifest in the dist directory
 var revManifest = path.dist + 'assets.json';
 
+var faPath = 'node_modules/fontawesome-web';
+
+var fontawesome = [
+  faPath + '/scss/fa-regular.scss',
+  faPath + '/scss/fa-solid.scss',
+  faPath + '/scss/fa-brands.scss'
+];
+
+var fontawesomeFonts = [
+  faPath + '/webfonts/fa-regular-*',
+  faPath + '/webfonts/fa-solid-*',
+  faPath + '/webfonts/fa-brands-*'
+];
+
 // ## Reusable Pipelines
 // See https://github.com/OverZealous/lazypipe
 
@@ -94,7 +108,7 @@ var cssTasks = function(filename) {
       return gulpif('*.scss', sass({
         outputStyle: 'nested', // libsass doesn't support expanded yet
         precision: 10,
-        includePaths: ['.', './bower_components/foundation-sites/scss/'],
+        includePaths: ['.', 'node_modules/fontawesome-web/scss'],
         errLogToConsole: !enabled.failStyleTask
       }));
     })
@@ -166,10 +180,10 @@ gulp.task('styles', ['wiredep'], function() {
     if (!enabled.failStyleTask) {
       cssTasksInstance.on('error', function(err) {
         console.error(err.message);
-        this.emit('end');
       });
     }
-    merged.add(gulp.src(dep.globs, {base: 'styles'})
+    var tasks = dep.globs.concat(fontawesome);
+    merged.add(gulp.src(tasks, {base: 'styles'})
       .pipe(cssTasksInstance));
   });
   return merged
@@ -195,10 +209,17 @@ gulp.task('scripts', ['jshint'], function() {
 // `gulp fonts` - Grabs all the fonts and outputs them in a flattened directory
 // structure. See: https://github.com/armed/gulp-flatten
 gulp.task('fonts', function() {
-  return gulp.src(globs.fonts)
+  var loFont = gulp.src(globs.fonts)
     .pipe(flatten())
     .pipe(gulp.dest(path.dist + 'fonts'))
     .pipe(browserSync.stream());
+
+  var faFont = gulp.src(fontawesomeFonts)
+    .pipe(flatten())
+    .pipe(gulp.dest(path.dist + 'fonts'))
+    .pipe(browserSync.stream());
+  
+  return merge(loFont, faFont);
 });
 
 // ### Images
