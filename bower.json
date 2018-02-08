@@ -9,7 +9,6 @@
   "private": true,
   "dependencies": {
     "foundation-sites": "~6.4.3",
-    "fontawesome": "~4.7.0",
     "slick-carousel": "~1.6.0",
     "slick-lightbox": "~0.2.8",
     "css-hamburgers": "~0.8.1"
@@ -49,12 +48,6 @@
         "./dist/js/plugins/foundation.tabs.js",
         "./dist/js/plugins/foundation.toggler.js",
         "./dist/js/plugins/foundation.tooltip.js"
-      ]
-    },
-    "fontawesome": {
-      "main": [
-        "./scss/font-awesome.scss",
-        "./fonts/*"
       ]
     },
     "slick-carousel": {
