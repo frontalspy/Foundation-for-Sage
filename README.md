@@ -1,11 +1,11 @@
 A fork of [https://github.com/fredericpfisterer/Foundation-for-Sage](https://github.com/fredericpfisterer/Foundation-for-Sage)
 
-Contains a few fixes and updates as well as some useful dependencies and features: FontAwesome, Slick Slider, Slick Lightbox, modernizr, and css-hamburgers.
+Contains a few fixes and updates as well as some useful dependencies and features: FontAwesome 5, Slick Slider, Slick Lightbox, modernizr, and css-hamburgers.
 
 You can find more information about their implementations and how to use them here:
 
-* Foundation 6.4: http://foundation.zurb.com/sites/docs/
-* FontAwesome: http://fontawesome.io/
+* Foundation 6.4: https://foundation.zurb.com/sites/docs/
+* FontAwesome 5: https://fontawesome.com/
 * Slick Slider: https://kenwheeler.github.io/slick/
 * Slick Lightbox: https://mreq.github.io/slick-lightbox/
 * Modernizr: https://modernizr.com/
