@@ -218,7 +218,7 @@ gulp.task('fonts', function() {
     .pipe(flatten())
     .pipe(gulp.dest(path.dist + 'fonts'))
     .pipe(browserSync.stream());
-  
+
   return merge(loFont, faFont);
 });
 
