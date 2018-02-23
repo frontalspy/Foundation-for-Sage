@@ -69,7 +69,7 @@ var enabled = {
 // Path to the compiled assets manifest in the dist directory
 var revManifest = path.dist + 'assets.json';
 
-var faPath = 'node_modules/fontawesome-web';
+var faPath = 'node_modules/@fortawesome/fontawesome-free-webfonts';
 
 var fontawesome = [
   faPath + '/scss/fa-regular.scss',
@@ -108,7 +108,7 @@ var cssTasks = function(filename) {
       return gulpif('*.scss', sass({
         outputStyle: 'nested', // libsass doesn't support expanded yet
         precision: 10,
-        includePaths: ['.', 'node_modules/fontawesome-web/scss'],
+        includePaths: ['.', 'node_modules/@fortawesome/fontawesome-free-webfonts/scss'],
         errLogToConsole: !enabled.failStyleTask
       }));
     })
