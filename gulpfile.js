@@ -69,19 +69,19 @@ var enabled = {
 // Path to the compiled assets manifest in the dist directory
 var revManifest = path.dist + 'assets.json';
 
-var faPath = 'node_modules/@fortawesome/fontawesome-free-webfonts';
-
-var fontawesome = [
-  faPath + '/scss/fa-regular.scss',
-  faPath + '/scss/fa-solid.scss',
-  faPath + '/scss/fa-brands.scss'
-];
-
-var fontawesomeFonts = [
-  faPath + '/webfonts/fa-regular-*',
-  faPath + '/webfonts/fa-solid-*',
-  faPath + '/webfonts/fa-brands-*'
-];
+// Set the path for FontAwesome depending on free or Pro
+var FAPath = function(){
+  var fs = require('fs'),
+  FAFree = 'node_modules/@fortawesome/fontawesome-free-webfonts',
+  FAPro = 'node_modules/@fortawesome/fontawesome-pro-webfonts';
+  fs.access(FAPro, fs.constants.F_OK, (err) => {
+    if(err) {
+      faPath = FAFree;
+    } else {
+      faPath = FAPro;
+    }
+  });
+};
 
 // ## Reusable Pipelines
 // See https://github.com/OverZealous/lazypipe
@@ -174,10 +174,18 @@ var writeToManifest = function(directory) {
 // By default this task will only log a warning if a precompiler error is
 // raised. If the `--production` flag is set: this task will fail outright.
 gulp.task('styles', ['wiredep'], function() {
+  var fontawesome = [
+    faPath + '/scss/fa-regular.scss',
+    faPath + '/scss/fa-solid.scss',
+    faPath + '/scss/fa-brands.scss',
+    faPath + '/scss/fa-light.scss',
+  ];
   var merged = merge();
+  // merged.add(gulp.src(fontawesome, {base: 'styles'})
+  //     .pipe(cssTasks('main.css')));
   manifest.forEachDependency('css', function(dep) {
     var cssTasksInstance = cssTasks(dep.name);
-    if (!enabled.failStyleTask) {
+    if (enabled.failStyleTask) {
       cssTasksInstance.on('error', function(err) {
         console.error(err.message);
       });
@@ -209,11 +217,16 @@ gulp.task('scripts', ['jshint'], function() {
 // `gulp fonts` - Grabs all the fonts and outputs them in a flattened directory
 // structure. See: https://github.com/armed/gulp-flatten
 gulp.task('fonts', function() {
+  var fontawesomeFonts = [
+    faPath + '/webfonts/fa-regular-*',
+    faPath + '/webfonts/fa-solid-*',
+    faPath + '/webfonts/fa-brands-*',
+    faPath + '/webfonts/fa-light-*'
+  ];
   var loFont = gulp.src(globs.fonts)
     .pipe(flatten())
     .pipe(gulp.dest(path.dist + 'fonts'))
     .pipe(browserSync.stream());
-
   var faFont = gulp.src(fontawesomeFonts)
     .pipe(flatten())
     .pipe(gulp.dest(path.dist + 'fonts'))
@@ -329,6 +342,8 @@ gulp.task('wiredep', function() {
 
 // ### Gulp
 // `gulp` - Run a complete build. To compile for production run `gulp --production`.
+// Also set the FontAwesome Path
 gulp.task('default', ['clean'], function() {
+  new FAPath();
   gulp.start('build');
 });
