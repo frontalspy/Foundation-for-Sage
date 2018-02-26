@@ -72,11 +72,11 @@ var revManifest = path.dist + 'assets.json';
 var faPath;
 
 // Set the path for FontAwesome depending on free or Pro
-var fs = require('fs'),
-FAFree = 'node_modules/@fortawesome/fontawesome-free-webfonts',
-FAPro = 'node_modules/@fortawesome/fontawesome-pro-webfonts';
+var fs = require('fs');
+var FAFree = 'node_modules/@fortawesome/fontawesome-free-webfonts';
+var FAPro = 'node_modules/@fortawesome/fontawesome-pro-webfonts';
 fs.access(FAPro, fs.constants.F_OK, (err) => {
-  if(err) {
+  if (err) {
     faPath = FAFree;
   } else {
     faPath = FAPro;
