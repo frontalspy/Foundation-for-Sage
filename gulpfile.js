@@ -69,19 +69,19 @@ var enabled = {
 // Path to the compiled assets manifest in the dist directory
 var revManifest = path.dist + 'assets.json';
 
+var faPath;
+
 // Set the path for FontAwesome depending on free or Pro
-var FAPath = function(){
-  var fs = require('fs'),
-  FAFree = 'node_modules/@fortawesome/fontawesome-free-webfonts',
-  FAPro = 'node_modules/@fortawesome/fontawesome-pro-webfonts';
-  fs.access(FAPro, fs.constants.F_OK, (err) => {
-    if(err) {
-      faPath = FAFree;
-    } else {
-      faPath = FAPro;
-    }
-  });
-};
+var fs = require('fs'),
+FAFree = 'node_modules/@fortawesome/fontawesome-free-webfonts',
+FAPro = 'node_modules/@fortawesome/fontawesome-pro-webfonts';
+fs.access(FAPro, fs.constants.F_OK, (err) => {
+  if(err) {
+    faPath = FAFree;
+  } else {
+    faPath = FAPro;
+  }
+});
 
 // ## Reusable Pipelines
 // See https://github.com/OverZealous/lazypipe
@@ -344,6 +344,5 @@ gulp.task('wiredep', function() {
 // `gulp` - Run a complete build. To compile for production run `gulp --production`.
 // Also set the FontAwesome Path
 gulp.task('default', ['clean'], function() {
-  new FAPath();
   gulp.start('build');
 });
