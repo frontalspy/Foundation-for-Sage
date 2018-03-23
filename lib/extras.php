@@ -36,13 +36,6 @@ function excerpt_more() {
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
-class foundationNavMenu extends \Walker_Nav_menu {
-  public function start_lvl(&$output, $depth = 0, $args = array()) {
-    $indent = str_repeat("\t", $depth);
-    $output .= "\n$indent<ul class=\"menu\">\n";
-  }
-}
-
 // Adds Foundation classes to next/prev buttons
 function posts_link_attributes() {
     return 'class="button primary-background"';
