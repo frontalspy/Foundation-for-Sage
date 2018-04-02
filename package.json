@@ -65,9 +65,9 @@
     "wiredep": "^4.0.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free-webfonts": "^1.0.3"
+    "@fortawesome/fontawesome-free-webfonts": "^1.0.5"
   },
   "optionalDependencies":{
-    "@fortawesome/fontawesome-pro-webfonts": "^1.0.3"
+    "@fortawesome/fontawesome-pro-webfonts": "^1.0.5"
   }
 }
