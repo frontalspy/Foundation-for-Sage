@@ -72,11 +72,11 @@ var revManifest = path.dist + 'assets.json';
 var faPath;
 
 // Set the path for FontAwesome depending on free or Pro
-var fs = require('fs');
-var FAFree = 'node_modules/@fortawesome/fontawesome-free';
-var FAPro = 'node_modules/@fortawesome/fontawesome-pro';
+var fs = require('fs'),
+FAFree = 'node_modules/@fortawesome/fontawesome-free',
+FAPro = 'node_modules/@fortawesome/fontawesome-pro';
 fs.access(FAPro, fs.constants.F_OK, (err) => {
-  if (err) {
+  if(err) {
     faPath = FAFree;
   } else {
     faPath = FAPro;
@@ -175,10 +175,10 @@ var writeToManifest = function(directory) {
 // raised. If the `--production` flag is set: this task will fail outright.
 gulp.task('styles', ['wiredep'], function() {
   var fontawesome = [
-    faPath + '/scss/fa-regular.scss',
-    faPath + '/scss/fa-solid.scss',
-    faPath + '/scss/fa-brands.scss',
-    faPath + '/scss/fa-light.scss',
+    faPath + '/scss/regular.scss',
+    faPath + '/scss/solid.scss',
+    faPath + '/scss/brands.scss',
+    faPath + '/scss/light.scss',
   ];
   var merged = merge();
   // merged.add(gulp.src(fontawesome, {base: 'styles'})
