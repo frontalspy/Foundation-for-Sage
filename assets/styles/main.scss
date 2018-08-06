@@ -292,9 +292,16 @@ $fa-font-path: '../fonts';
 @import "animated";
 @import "rotated-flipped";
 @import "stacked";
-@import "settings/fontawesome";
 @import "screen-reader";
 
+/** 
+ * Allow Custom Fonts
+ * To reduce css size, you can use the below import
+ * and comment out 'icons'
+ *
+ * @import "settings/fontawesome";
+ */
+@import "icons";
 
 /**
  * -------------------------------------------------------------
