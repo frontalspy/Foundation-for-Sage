@@ -283,8 +283,8 @@
 // Override the font directory
 $fa-font-path: '../fonts';
 
-@import "core";
 @import "mixins";
+@import "core";
 @import "larger";
 @import "fixed-width";
 @import "list";
