@@ -8,10 +8,10 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "foundation-sites": "~6.4.3",
+    "foundation-sites": "~6.5.3",
     "slick-carousel": "~1.6.0",
-    "slick-lightbox": "~0.2.8",
-    "css-hamburgers": "~0.8.1"
+    "slick-lightbox": "~0.2.12",
+    "css-hamburgers": "~1.1.3"
   },
   "overrides": {
     "foundation-sites": {
