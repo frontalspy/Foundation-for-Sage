@@ -4,16 +4,16 @@ Contains a few fixes and updates as well as some useful dependencies and feature
 
 You can find more information about their implementations and how to use them here:
 
-* Foundation 6.4: https://foundation.zurb.com/sites/docs/
+* Foundation 6.5: https://foundation.zurb.com/sites/docs/
 * FontAwesome 5: https://fontawesome.com/
 * Slick Slider: https://kenwheeler.github.io/slick/
 * Slick Lightbox: https://mreq.github.io/slick-lightbox/
 * Modernizr: https://modernizr.com/
 * Css-Hamburgers: https://jonsuh.com/hamburgers/
 
+*Note: To use the Pro version of Font Awesome 5 please set the npm config to use your FA token. More information found here: [https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers)*
 
-
-# Foundation 6.4 for Sage
+# Foundation 6.5 for Sage
 [![Build Status](https://travis-ci.org/frontalspy/Sage-Foundation.svg?branch=master)](https://travis-ci.org/frontalspy/Sage-Foundation)
 [![devDependencies Status](https://david-dm.org/frontalspy/sage-foundation/dev-status.svg)](https://david-dm.org/frontalspy/sage-foundation?type=dev)
 
@@ -62,7 +62,7 @@ See a complete working example in the [roots-example-project.com repo](https://g
 
 ## Theme installation
 
-Clone the git repo - `git clone https://github.com/roots/sage.git` and then rename the directory to the name of your theme or website.
+Clone the git repo - `git clone https://github.com/frontalspy/Sage-Foundation.git` and then rename the directory to the name of your theme or website.
 
 ## Theme setup
 
