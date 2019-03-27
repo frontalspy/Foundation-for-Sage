@@ -1,5 +1,5 @@
 {
-  "name": "Sage-Foundation-6.4",
+  "name": "Sage-Foundation-6.5",
   "version": "8.5.0",
   "author": "Brendon <frontalspy@otakutale.com>",
   "homepage": "https://github.com/frontalspy/",
@@ -65,9 +65,9 @@
     "wiredep": "^4.0.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.1.0"
+    "@fortawesome/fontawesome-free": "^5.8.1"
   },
   "optionalDependencies":{
-    "@fortawesome/fontawesome-pro": "^5.1.0"
+    "@fortawesome/fontawesome-pro": "^5.8.1"
   }
 }
