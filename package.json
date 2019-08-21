@@ -65,9 +65,9 @@
     "wiredep": "^4.0.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.8.1"
+    "@fortawesome/fontawesome-free": "^5.10.1"
   },
   "optionalDependencies":{
-    "@fortawesome/fontawesome-pro": "^5.8.1"
+    "@fortawesome/fontawesome-pro": "^5.10.1"
   }
 }
